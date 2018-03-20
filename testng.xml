@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CrossBrowserTest" verbose="1">
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="BaseTest" />
+            <class name="CreationOrder" />
+            <class name="AssertShopVersion" />
+        </classes>
+    </test>
+
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="BaseTest" />
+            <class name="CreationOrder" />
+            <class name="AssertShopVersion" />
+        </classes>
+    </test>
+
+    <test name="MobileTest" >
+        <parameter name="browser" value="mobile"/>
+        <classes>
+            <class name="BaseTest" />
+            <class name="CreationOrder" />
+            <class name="AssertShopVersion" />
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="Listener" />
+    </listeners>
+
+</suite>
